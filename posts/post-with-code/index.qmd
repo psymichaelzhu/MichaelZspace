@@ -5,7 +5,6 @@ date: "2025-03-13"
 description: "[📄paper](https://drive.google.com/file/d/1PUhsLCAq-ZCMxXJlnDkSvAAtTbR8MA_P/view),  [💻code](https://github.com/psymichaelzhu/Social_Interaction)"
 categories: [active learning, multi-modal model, embedding, archetype-based method, neuroscience, computational approach]
 toc: true
-title-block-banner: cover.jpg
 ---
 
 ## Introduction
