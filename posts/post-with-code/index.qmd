@@ -5,6 +5,7 @@ date: "2025-03-13"
 description: "[📄paper](https://drive.google.com/file/d/1PUhsLCAq-ZCMxXJlnDkSvAAtTbR8MA_P/view),  [💻code](https://github.com/psymichaelzhu/Social_Interaction)"
 categories: [active learning, multi-modal model, embedding, archetype-based method, neuroscience, computational approach]
 toc: true
+title-block-banner: cover.jpg
 ---
 
 ## Introduction
@@ -13,7 +14,7 @@ In our daily lives, we constantly observe people interacting with one another. B
 
 Traditionally, hypotheses are tested by comparing human annotations with neural activity to identify correlations between specific social interaction features and brain regions. The naturalistic paradigm is well-suited for this type of investigation, as its information-rich stimuli allow for the possibility of testing multiple hypotheses simultaneously ([Almaatouq et al., 2024](https://doi.org/10.1017/s0140525x22002874); [Carvalho & Lampinen, 2025](https://arxiv.org/abs/2502.20349)). However, due to financial constraints, human annotations are typically limited to a small set of dimensions, restricting our ability to fully utilize the richness of the stimuli and explore the design space comprehensively. To overcome this limitation, we propose a framework that leverages deep neural networks to efficiently generate hypothesis-based annotations, enabling the exploration of a much broader—potentially infinite—range of hypotheses.
 
-![Explore in the Hypothesis Space](/img/Figure%200.jpg){#fig-1 fig-align="center" width="800"}
+![Explore the Hypothesis Space ([Almaatouq et al., 2024](https://doi.org/10.1017/s0140525x22002874)](/img/Figure%200.jpg){#fig-1 fig-align="center" width="800"}
 
 ## Methods
 
