@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "MichaelZspace"
@@ -17,8 +18,6 @@ format:
     css: styles.css
     toc: true
 
-metadata-files: 
-  - _publish.yml
 
 
 
