@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.3.450" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="author" content="Michael Zhu">
+<meta name="dcterms.date" content="2025-03-13">
+<meta name="description" content="📄paper, 💻code">
 
-<meta name="author" content="Michael Zhu" />
-<meta name="dcterms.date" content="2025-03-13" />
-<meta name="description" content="📄paper, 💻code" />
-
-<title>MichaelZspace – A Scalable Framework to Decode Neural Representation of Social Interaction</title>
+<title>MichaelZspace - A Scalable Framework to Decode Neural Representation of Social Interaction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -27,7 +25,23 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -50,34 +64,32 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css" />
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body>
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="/index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">MichaelZspace</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-  aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
-  onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="/index.html" rel="" target="">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -88,18 +100,8 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-  <div class="quarto-title-banner">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">A Scalable Framework to Decode Neural Representation of Social Interaction</h1>
                   <div>
@@ -139,60 +141,70 @@ ul.task-list li input[type="checkbox"] {
     </div>
     
   
-  </header>
-<nav id="TOC" role="doc-toc">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-  <li><a href="#methods" id="toc-methods">Methods</a>
-  <ul>
-  <li><a href="#dataset" id="toc-dataset">Dataset</a></li>
-  <li><a href="#deep-learning" id="toc-deep-learning">Deep learning</a></li>
-  <li><a href="#representational-similarity-analysis" id="toc-representational-similarity-analysis">Representational similarity analysis</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning">Deep learning</a></li>
+  <li><a href="#representational-similarity-analysis" id="toc-representational-similarity-analysis" class="nav-link" data-scroll-target="#representational-similarity-analysis">Representational similarity analysis</a></li>
   </ul></li>
-  <li><a href="#results" id="toc-results">Results</a>
-  <ul>
-  <li><a href="#deep-learning-1" id="toc-deep-learning-1">Deep learning</a></li>
-  <li><a href="#representational-similarity-analysis-1" id="toc-representational-similarity-analysis-1">Representational similarity analysis</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#deep-learning-1" id="toc-deep-learning-1" class="nav-link" data-scroll-target="#deep-learning-1">Deep learning</a></li>
+  <li><a href="#representational-similarity-analysis-1" id="toc-representational-similarity-analysis-1" class="nav-link" data-scroll-target="#representational-similarity-analysis-1">Representational similarity analysis</a></li>
   </ul></li>
-  <li><a href="#discussion" id="toc-discussion">Discussion</a></li>
-  <li><a href="#references" id="toc-references">References</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
 <section id="introduction" class="level2">
-<h2>Introduction</h2>
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>In our daily lives, we constantly observe people interacting with one another. But how does our brain represent social interactions? To answer this question, previous studies have primarily used the naturalistic paradigm (<a href="https://arxiv.org/abs/2502.20349">Carvalho &amp; Lampinen, 2025</a>; <a href="https://doi.org/10.1109/tpami.2019.2901464">Monfort et al., 2020</a>) to investigate which aspects of social interactions are processed by different regions of the brain. For example, one study (<a href="https://doi.org/10.1016/j.cub.2023.10.015">McMahon et al., 2023</a>) demonstrated the existence of a social pathway that processes social interaction features in a hierarchical manner—ranging from low-level attributes like agent distance to high-level aspects such as communication—mirroring the organization of basic visual processing (<a href="https://doi.org/10.1016/j.tics.2023.09.001">McMahon &amp; Isik, 2023</a>). Another study (<a href="https://doi.org/10.1093/scan/nsae030">Lee Masson et al., 2024</a>) found that higher-level features of social interaction, such as mentalization, are represented in the superior temporal gyrus (STG) and middle temporal gyrus (MTG).</p>
 <p>Traditionally, hypotheses are tested by comparing human annotations with neural activity to identify correlations between specific social interaction features and brain regions. The naturalistic paradigm is well-suited for this type of investigation, as its information-rich stimuli allow for the possibility of testing multiple hypotheses simultaneously (<a href="https://doi.org/10.1017/s0140525x22002874">Almaatouq et al., 2024</a>; <a href="https://arxiv.org/abs/2502.20349">Carvalho &amp; Lampinen, 2025</a>). However, due to financial constraints, human annotations are typically limited to a small set of dimensions, restricting our ability to fully utilize the richness of the stimuli and explore the design space comprehensively. To overcome this limitation, we propose a framework that leverages deep neural networks to efficiently generate hypothesis-based annotations, enabling the exploration of a much broader—potentially infinite—range of hypotheses.</p>
-<div id="fig-1" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%200.jpg" class="img-fluid" width="800" /></p>
-<figcaption>Figure 1: Explore in the Hypothesis Space</figcaption>
+<div id="fig-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 0.jpg" class="img-fluid figure-img" width="800"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Explore in the Hypothesis Space</figcaption>
 </figure>
 </div>
 </section>
 <section id="methods" class="level2">
-<h2>Methods</h2>
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
 <section id="dataset" class="level3">
-<h3>Dataset</h3>
+<h3 class="anchored" data-anchor-id="dataset">Dataset</h3>
 <section id="participants-design" class="level4">
-<h4>Participants &amp; Design</h4>
+<h4 class="anchored" data-anchor-id="participants-design">Participants &amp; Design</h4>
 <p>The dataset is from (<a href="https://doi.org/10.1016/j.cub.2023.10.015">McMahon et al., 2023</a>). The study included 4 participants (2 females, mean age 25.5 years, range 23–30; 3 Caucasian, 1 Asian), each undergoing four 2-hour fMRI sessions (3T, TR =1.5s). Participants viewed 250 3-second videos depicting dyadic social interactions without sound. The videos were selected from the Moments in Time dataset (<a href="https://doi.org/10.1109/tpami.2019.2901464">Monfort et al., 2020</a>) and annotated across low-, mid-, and high-level features, including visual, social, and affective properties.</p>
-<div id="fig-2" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%201.jpg" class="img-fluid" width="500" /></p>
-<figcaption>Figure 2: Video Distribution on Annotated Dimensions (<a href="https://doi.org/10.1109/tpami.2019.2901464">Monfort et al., 2020</a>)</figcaption>
+<div id="fig-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 1.jpg" class="img-fluid figure-img" width="500"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Video Distribution on Annotated Dimensions (<a href="https://doi.org/10.1109/tpami.2019.2901464">Monfort et al., 2020</a>)</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class='callout-icon'></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 fMRI data Preprocessing
 </div>
-<div class='callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end'><i class='callout-toggle'></i></div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
@@ -208,29 +220,29 @@ fMRI data Preprocessing
 <li><p>Spatial Normalization. BOLD images were resampled to MNI152NLin2009cAsym space for standardization.</p></li>
 <li><p>Surface &amp; Volumetric Resampling. Functional data were mapped onto FreeSurfer’s fsnative space and volumetric data were transformed using ANTs’ antsApplyTransforms with Lanczos interpolation (Lanczos, 1964).</p></li>
 </ol>
-<p>The regions of interest (ROIs) in this study follow those defined by McMahon et al. (2023). Anatomical ROIs, including EVC and MT, were identified based on structural landmarks. Anatomically constrained functional ROIs, such as pSTS and aSTS, were localized using functional tasks but constrained within anatomically defined regions. Functional ROIs, including biomotion-STS, TPJ, FFA, face-pSTS, PPA, EBA, and LOC, were identified purely through functional localizers without anatomical constraints.</p>
+<p>The regions of interest (ROIs) in this study follow those defined by McMahon et al.&nbsp;(2023). Anatomical ROIs, including EVC and MT, were identified based on structural landmarks. Anatomically constrained functional ROIs, such as pSTS and aSTS, were localized using functional tasks but constrained within anatomically defined regions. Functional ROIs, including biomotion-STS, TPJ, FFA, face-pSTS, PPA, EBA, and LOC, were identified purely through functional localizers without anatomical constraints.</p>
 </div>
 </div>
 </div>
 </section>
 </section>
 <section id="deep-learning" class="level3">
-<h3>Deep learning</h3>
+<h3 class="anchored" data-anchor-id="deep-learning">Deep learning</h3>
 <p>Here we propose a framework utilizing deep learning to develop automated, hypothesis-based annotations for naturalistic stimuli such as videos.</p>
 <p>Traditional naturalistic paradigms rely on human annotations to describe social interaction features in videos, but this approach is costly thus restricts the number of hypotheses that can be tested (<a href="https://doi.org/10.1017/s0140525x22002874">Almaatouq et al., 2024</a>). To overcome this, we use the CLIP model, a multi-modal model trained on paired image-text data (<a href="https://arxiv.org/abs/2103.00020">Radford et al., 2021</a>), to generate video annotations automatically, allowing for systematic, scalable, and fine-grained hypothesis testing (<a href="https://doi.org/10.1093/scan/nsae014">Sievers &amp; Thornton, 2024</a>). Instead of directly computing the similarity between video embeddings and raw concepts, this method operationalizes the target concept as a structured set of items, enabling a more nuanced evaluation of video content along specific dimensions (<a href="#fig-4">Figure 4</a>).</p>
-<div id="fig-3" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%202.jpg" class="img-fluid" width="800" /></p>
-<figcaption>Figure 3: Conceptual Introduction: Contrastive Language-Image Pre-training (CLIP) model <a href="https://arxiv.org/abs/2103.00020">Radford et al., 2021</a></figcaption>
+<div id="fig-3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 2.jpg" class="img-fluid figure-img" width="800"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Conceptual Introduction: Contrastive Language-Image Pre-training (CLIP) model <a href="https://arxiv.org/abs/2103.00020">Radford et al., 2021</a></figcaption>
 </figure>
 </div>
 <p>For a given video, we extract a video embedding vector by first processing individual frames and then aggregating their embeddings. Each video is sliced into a sequence of frames, and each frame is passed through CLIP’s vision encoder to obtain an embedding vector. The frame embeddings are then aggregated using a mean pooling operation to generate a single video embedding vector.</p>
 <p>Inspired by the idea of questionnaire-based psychological measurement, to annotate a video based on a hypothesis regarding certain dimension of social interaction, we first operationalize the hypothesis into a structured set of items. For example, if the hypothesis is about the “agents’ relationship” dimension of social interactions, we define specific relationship types such as “friends”, “coworkers” as items to define this dimension. Each item is converted into an embedding vector using CLIP’s text encoder.</p>
 <p>Once both video embeddings and hypothesis item embeddings are obtained, we compute how well the video aligns with each item under the hypothesis dimension using cosine similarity. The similarity score between the video embedding and each item embedding is calculated, resulting in a score vector. These scores are then normalized across all items so that they sum to one, ensuring a relative weighting of how the video fits within the hypothesis dimension. This normalized vector provides a structured description of the video under a specific hypothesis focus.</p>
-<div id="fig-4" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%203.jpg" class="img-fluid" width="600" /></p>
-<figcaption>Figure 4: Hypothesis-based Annotation Based on CLIP</figcaption>
+<div id="fig-4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 3.jpg" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Hypothesis-based Annotation Based on CLIP</figcaption>
 </figure>
 </div>
 <p>After obtaining an annotation vector for each video, we can compare videos within a hypothesis dimension by computing the similarity between their annotation vectors. Given two videos, their similarity is computed using 1- Euclidean distance, which measures how similarly two videos are annotated within the hypothesis dimension. If two videos have high similarity, it suggests that they are similar under the given hypothesis. If they differ in certain items, such as one scoring high on “friends” and another on “coworkers,” they are more distinct in the “agents’ relationship” dimension.</p>
@@ -239,20 +251,20 @@ fMRI data Preprocessing
 <p>For comparison purpose, we also extract the original embedding of the <a href="https://github.com/facebookresearch/MetaCLIP/tree/main">CLIP model</a> (model name: ViT-bigG-14-quickgelu, pretrained weights: metaclip_fullcc), with a length of 1280. In addition, we extract the global average pooling layer embeddings from several visual models, two <a href="https://github.com/zhoubolei/moments_models">ResNet50 variants</a>, ResNet3d50, an inflated version to deal with video (<a href="https://arxiv.org/abs/1705.07750">Carreira &amp; Zisserman, 2017</a>), and multi-ResNet3d50, a version trained on multiple overlapping actions using the Broden dataset and wLSEP loss (<a href="https://doi.org/10.1109/tpami.2019.2901464">Monfort et al., 2020</a>). The visual models have embeddings with length 2048.</p>
 </section>
 <section id="representational-similarity-analysis" class="level3">
-<h3>Representational similarity analysis</h3>
+<h3 class="anchored" data-anchor-id="representational-similarity-analysis">Representational similarity analysis</h3>
 <p>Representational Similarity Analysis (RSA) was used to compare neural activity patterns with different computational candidates (<a href="https://doi.org/10.3389/neuro.06.004.2008">Kriegeskorte, 2008</a>; <a href="https://doi.org/10.1371/journal.pcbi.1003553">Nili et al., 2014</a>; <a href="https://doi.org/10.1093/scan/nsz099">Popal et al., 2019</a>). The core idea is to quantify the similarity structure of representations by constructing representational similarity matrices (RSMs) and then compare candidate RSMs (models) with reference RSM (neural) (<a href="#fig-6">Figure 6</a>).</p>
-<div id="fig-5" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%204.jpg" class="img-fluid" width="700" /></p>
-<figcaption>Figure 5: Conceptual Introduction: Representational Similarity Analysis (<a href="https://doi.org/10.1093/scan/nsz099">Popal et al., 2019</a>)</figcaption>
+<div id="fig-5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 4.jpg" class="img-fluid figure-img" width="700"></p>
+<figcaption class="figure-caption">Figure&nbsp;5: Conceptual Introduction: Representational Similarity Analysis (<a href="https://doi.org/10.1093/scan/nsz099">Popal et al., 2019</a>)</figcaption>
 </figure>
 </div>
 <p>For the neural RSM, we calculated the representational structure of each participant’s brain activity during video viewing. This was done by extracting the voxel-level β-value sequences (activation levels, organized by the original paper) for each two videos in a given ROI and computing the pairwise Pearson correlation between these activation patterns. This resulted in a 244 × 244 similarity matrix for each participant, reflecting how similarly the ROI responded to each pair of videos. At the group level, we averaged across participants’ RSMs to obtain a group neural RSM (<a href="https://doi.org/10.1101/2024.12.05.626975">Sartzetaki et al., 2024</a>). To ensure statistical robustness, we applied Fisher’s z-transformation (<a href="https://psycnet.apa.org/record/1987-14534-001">Silver &amp; Dunlap, 1987</a>) before averaging and converted the results back to correlation values.</p>
 <p>To compare neural RSMs with computational models, we considered two types of candidate RSMs. The first type was based on network embeddings, where we extracted high-dimensional representations for each video using pre-trained deep learning models. Since embedding spaces are typically non-Euclidean (<a href="https://doi.org/10.1038/s41562-024-02089-y">Wulff &amp; Mata, 2025</a>), we computed cosine similarity between video embeddings to construct an embedding RSM of size 244 × 244. The second type relied on hypothesis-driven annotations, where we extracted semantic annotations for each video using CLIP model. Since these annotation values were approximately normally distributed, we computed 1 - Euclidean distance between annotation vectors to measure similarity, yielding another 244 × 244 RSM.</p>
-<div id="fig-6" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%205.jpg" class="img-fluid" width="600" /></p>
-<figcaption>Figure 6: Representational Similarity Analysis Roadmap</figcaption>
+<div id="fig-6" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 5.jpg" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figure&nbsp;6: Representational Similarity Analysis Roadmap</figcaption>
 </figure>
 </div>
 <p>To assess the relationship between neural patterns and model-based representations, we computed Spearman correlations between the lower triangles of the neural RSM and each candidate RSM (<a href="https://doi.org/10.3389/neuro.06.004.2008">Kriegeskorte, 2008</a>; <a href="https://doi.org/10.1093/scan/nsz099">Popal et al., 2019</a>). This was done for each participant individually as well as at the group-level averaged RSMs. To determine statistical significance, we performed permutation testing of 1000 times by shuffling similarity values within the RSM (<a href="https://doi.org/10.1371/journal.pcbi.1003553">Nili et al., 2014</a>). This resulting the correlation ROI x Candidate matrices, for each subject or at the group-level.</p>
@@ -261,59 +273,59 @@ fMRI data Preprocessing
 </section>
 </section>
 <section id="results" class="level2">
-<h2>Results</h2>
+<h2 class="anchored" data-anchor-id="results">Results</h2>
 <section id="deep-learning-1" class="level3">
-<h3>Deep learning</h3>
+<h3 class="anchored" data-anchor-id="deep-learning-1">Deep learning</h3>
 <p>We first evaluated the validity of aggregating frame embeddings into video embeddings. As shown in the <a href="#fig-7">Figure 7</a>, the within-video similarity, measured as the cosine similarity between each frame and its video centroid, is consistently high (all above 0.95), while the between-video similarity, calculated as the cosine similarity between the centroids of different videos, is relatively lower and has larger variance across videos. This clear separation indicates that cross-frame aggregation should preserve video-level representation.</p>
-<div id="fig-7" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%206.jpg" class="img-fluid" width="500" /></p>
-<figcaption>Figure 7: <strong>Verification: Cross-frame aggregation for obtaining video embeddings.</strong> This scatter plot (jittered by x-axis) illustrates the cosine similarity of within-video (blue) and between-video (orange) comparisons. The x-axis represents randomly selected video indices, while the y-axis shows cosine similarity values. After obtaining the video CLIP embeddings, we examined their consistency with human ratings.</figcaption>
+<div id="fig-7" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 6.jpg" class="img-fluid figure-img" width="500"></p>
+<figcaption class="figure-caption">Figure&nbsp;7: <strong>Verification: Cross-frame aggregation for obtaining video embeddings.</strong> This scatter plot (jittered by x-axis) illustrates the cosine similarity of within-video (blue) and between-video (orange) comparisons. The x-axis represents randomly selected video indices, while the y-axis shows cosine similarity values. After obtaining the video CLIP embeddings, we examined their consistency with human ratings.</figcaption>
 </figure>
 </div>
 <p>After obtaining the video CLIP embeddings, we examined their consistency with human ratings <a href="#fig-8">Figure 8</a>. The results indicate that CLIP embedding effectively captures meaningful social interaction attributes, showing strong correlations in dimensions such as expanse, indoor, and agent distance (p&lt;0.001), while more abstract dimensions like joint action (p&lt;0.01), valence and arousal (p &lt; 0.05) exhibit weaker correlations, but all of them are statistically significant. This further validates the reliability of the video embeddings and demonstrates CLIP’s potential for capturing semantic information.</p>
-<div id="fig-8" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%207.jpg" class="img-fluid" width="600" /></p>
-<figcaption>Figure 8: <strong>Correlation Between Human Ratings and CLIP Annotations Across Dimensions.</strong> This figure shows the correlation between human rating scores and CLIP-derived annotation scores across various dimensions (McMahon et al., 2023). The annotation scores were obtained by using description of each dimension in original paper to generate embeddings, which were then compared to video embeddings to generate similarity scores. Each subplot represents a different dimension, with scatter points showing individual video scores and trend lines indicating correlation strength (shadow ribbon as 95% confidence interval). Asterisks (* &lt;0.05, ** &lt;0.01, *** &lt;0.001) denote levels of statistical significance.</figcaption>
+<div id="fig-8" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 7.jpg" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figure&nbsp;8: <strong>Correlation Between Human Ratings and CLIP Annotations Across Dimensions.</strong> This figure shows the correlation between human rating scores and CLIP-derived annotation scores across various dimensions (McMahon et al., 2023). The annotation scores were obtained by using description of each dimension in original paper to generate embeddings, which were then compared to video embeddings to generate similarity scores. Each subplot represents a different dimension, with scatter points showing individual video scores and trend lines indicating correlation strength (shadow ribbon as 95% confidence interval). Asterisks (* &lt;0.05, ** &lt;0.01, *** &lt;0.001) denote levels of statistical significance.</figcaption>
 </figure>
 </div>
-<p>Finally, we employed the framework proposed before to extract hypothesis-based annotation for videos.<br />
+<p>Finally, we employed the framework proposed before to extract hypothesis-based annotation for videos.<br>
 To have an intuitive sense of the dimensional annotation, <a href="#fig-9">Figure 9</a> is an example of annotations within the “<em>game theory dynamics</em>” dimension, with three items: <em>cooperation, competition, and coordination</em>. The distribution of scores for each item, along with the highest- and lowest-scoring videos, demonstrates that the annotation process generally aligns with human intuition. The most striking point lies in the distinction between cooperation and coordination: High-scoring cooperation videos predominantly feature people working together towards a shared goal (e.g., planting trees), whereas coordination captures synchronized actions requiring precise temporal alignment (e.g., dancing, playing in a band). This distinction highlights the framework’s ability to capture subtle semantic differences, reinforcing its potential for video annotation.</p>
-<div id="fig-9" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%208.jpg" class="img-fluid" width="800" /></p>
-<figcaption>Figure 9: <strong>Example of “Game Theory Dynamics” Dimension Annotation.</strong> This figure presents the annotation results of the “game theory dynamics” dimension, which includes three items: cooperation, competition, and coordination. The left column displays score distributions for each item, with example video frames overlaid at different percentiles along the distribution (2nd, 25th, 50th, 75th, 98th). The right column shows five highest-scoring videos (top row) and five lowest-scoring videos (bottom row) for each item, providing visual examples of how videos vary along these items.</figcaption>
+<div id="fig-9" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 8.jpg" class="img-fluid figure-img" width="800"></p>
+<figcaption class="figure-caption">Figure&nbsp;9: <strong>Example of “Game Theory Dynamics” Dimension Annotation.</strong> This figure presents the annotation results of the “game theory dynamics” dimension, which includes three items: cooperation, competition, and coordination. The left column displays score distributions for each item, with example video frames overlaid at different percentiles along the distribution (2nd, 25th, 50th, 75th, 98th). The right column shows five highest-scoring videos (top row) and five lowest-scoring videos (bottom row) for each item, providing visual examples of how videos vary along these items.</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class='callout-icon'></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 More examples of CLIP annotations
 </div>
-<div class='callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end'><i class='callout-toggle'></i></div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<div id="fig-10" class="quarto-figure quarto-figure-left">
-<figure>
-<p><img src="../../img/Figure%20S2a.png" class="img-fluid" /></p>
-<figcaption>Figure 10: Example of “Transitivity” Dimension Annotation</figcaption>
+<div id="fig-10" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="../../img/Figure S2a.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;10: Example of “Transitivity” Dimension Annotation</figcaption>
 </figure>
 </div>
-<div id="fig-11" class="quarto-figure quarto-figure-left">
-<figure>
-<p><img src="../../img/Figure%20S2b.png" class="img-fluid" /></p>
-<figcaption>Figure 11: Example of “Context” Dimension Annotation</figcaption>
+<div id="fig-11" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="../../img/Figure S2b.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;11: Example of “Context” Dimension Annotation</figcaption>
 </figure>
 </div>
-<div id="fig-12" class="quarto-figure quarto-figure-left">
-<figure>
-<p><img src="../../img/Figure%20S2c.png" class="img-fluid" /></p>
-<figcaption>Figure 12: Example of “Activity” Dimension Annotation</figcaption>
+<div id="fig-12" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="../../img/Figure S2c.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;12: Example of “Activity” Dimension Annotation</figcaption>
 </figure>
 </div>
 </div>
@@ -321,23 +333,23 @@ More examples of CLIP annotations
 </div>
 </section>
 <section id="representational-similarity-analysis-1" class="level3">
-<h3>Representational similarity analysis</h3>
+<h3 class="anchored" data-anchor-id="representational-similarity-analysis-1">Representational similarity analysis</h3>
 <p>In this section, we examine the relationship between different candidate RSMs and neural RSMs. Given the large number of videos, the number of video pairs is substantial, resulting in an RSM with a vast number of observations in its lower triangle. This high volume of data means that even minor effects can appear statistically significant (<a href="https://doi.org/10.4103/2229-3485.159943">Ranganathan et al., 2015</a>). For instance, at the group level, the neural-candidate correlations yielded 88.1% permutation-based significance, even after Bonferroni multiple comparison correction. Therefore, in interpreting and visualizing these results, we focus primarily on effect sizes—the magnitude of correlation and regression coefficients—rather than statistical significance.</p>
 <p>We start by calculating the Spearman correlation between neural and candidate RSMs <a href="#fig-13">Figure 13</a>. For the network embedding results (right 3 columns), CLIP embedding similarity patterns correlate a broader range of ROIs compared to purely visual models (ResNet variants). However, while CLIP embeddings outperform vision-based embeddings in explaining neural patterns, they still lack interpretability—making it difficult to pinpoint the specific dimensions driving these neural correlations. This highlights the value of dimensional annotations, which provide a more hypothesis-based, fine-grained understanding of the underlying representations.</p>
-<div id="fig-13" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%209.png" class="img-fluid" width="500" /></p>
-<figcaption>Figure 13: <strong>Spearman Correlation Between Neural and Candidate RSMs.</strong> This heatmap presents the Spearman correlation between ROI RSMs(y-axis) and candidate RSMs (x-axis). Candidate RSMs were derived from hypothesis-based annotations (the left section) network embeddings (the right section). Warmer colors indicate positive correlations, while cooler colors indicate negative correlations. Since most (88.1%) of correlations are significant through permutation test of 1000 times, we did not highlight based on significance, instead based on the absolute value of the correlation coefficient. Correlations with magnitude larger than 0.15 are highlighted with black-bordered squares.</figcaption>
+<div id="fig-13" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../img/Figure 9.png" class="img-fluid figure-img" width="500"></p>
+<figcaption class="figure-caption">Figure&nbsp;13: <strong>Spearman Correlation Between Neural and Candidate RSMs.</strong> This heatmap presents the Spearman correlation between ROI RSMs(y-axis) and candidate RSMs (x-axis). Candidate RSMs were derived from hypothesis-based annotations (the left section) network embeddings (the right section). Warmer colors indicate positive correlations, while cooler colors indicate negative correlations. Since most (88.1%) of correlations are significant through permutation test of 1000 times, we did not highlight based on significance, instead based on the absolute value of the correlation coefficient. Correlations with magnitude larger than 0.15 are highlighted with black-bordered squares.</figcaption>
 </figure>
 </div>
 <p>In contrast to the broad associations found in original CLIP embedding, the dimensional annotation RSMs reveal selective neural correlations, where specific dimensions are linked to distinct brain regions rather than broadly distributed.</p>
 <p>Transitivity (i.e., whether people interact with objects, others, or act independently, <a href="#fig-10">Figure 10</a> shows above-threshold correlations (r&gt;0.15) with both sides of EBA (extrastriate body area), left MT (middle temporal visual area), right biomotion-STS (superior temporal sulcus) and right pSTS (posterior superior temporal sulcus). Given their well-established roles in body perception and action understanding, these regions appear to be particularly sensitive to how an agent engages with its environment (<a href="https://doi.org/10.1093/cercor/bhu277">Wang et al., 2015</a>; <a href="https://doi.org/10.1093/cercor/bhv111">Deen et al., 2015</a>). Additionally, right TPJ (temporoparietal junction), a region often associated with theory of mind and perspective-taking (<a href="https://doi.org/10.1016/s1053-8119(03)00230-1">Saxe &amp; Kanwisher, 2003</a>), also shows notable correlation, suggesting a possible role in higher-order interpretation of social engagement.</p>
-<p>Context (e.g., indoor vs. outdoor, <a href="#fig-11">Figure 11</a>) dimension shows remarkable correlations with visual scene-processing regions, particularly both sides of FFA (fusiform face area), right LOC (lateral occipital cortex) and right face-pSTS. Activity (e.g., dancing, cooking, <a href="#fig-12">Figure 12</a>) also shows moderate correlation with both sides of FFA. Interestingly, FFA, despite its primary role in face recognition (<a href="https://doi.org/10.1098/rstb.2006.1934">Kanwisher &amp; Yovel, 2006</a>), demonstrates strong correlations with scene-related dimensions. In contrast, PPA (parahippocampal place area), which is conventionally associated with scene processing (<a href="https://doi.org/10.1016/j.neuroimage.2012.02.055">Julian et al., 2012</a>), does not exhibit strong correlations with context.</p>
+<p>Context (e.g., indoor vs.&nbsp;outdoor, <a href="#fig-11">Figure 11</a>) dimension shows remarkable correlations with visual scene-processing regions, particularly both sides of FFA (fusiform face area), right LOC (lateral occipital cortex) and right face-pSTS. Activity (e.g., dancing, cooking, <a href="#fig-12">Figure 12</a>) also shows moderate correlation with both sides of FFA. Interestingly, FFA, despite its primary role in face recognition (<a href="https://doi.org/10.1098/rstb.2006.1934">Kanwisher &amp; Yovel, 2006</a>), demonstrates strong correlations with scene-related dimensions. In contrast, PPA (parahippocampal place area), which is conventionally associated with scene processing (<a href="https://doi.org/10.1016/j.neuroimage.2012.02.055">Julian et al., 2012</a>), does not exhibit strong correlations with context.</p>
 <p>A possible explanation for the FFA’s involvement is that different activities and contexts in these videos introduce substantial variations in facial visibility and orientation: “Scene features in our dataset are also heavily confounded with the size and visibility of faces in our videos” (<a href="https://doi.org/10.1016/j.cub.2023.10.015">McMahon et al., 2023</a>). For example, in fishing scenes <a href="#fig-12">Figure 12</a>, individuals are often seen in profile, facing away from the camera, and appearing smaller in the frame, which could drive scene-related variability in face perception. In contrast, the lack of significant PPA correlations across both network embeddings and dimensional annotations suggests that its weak response is unlikely to be an artifact of the annotation framework. Instead, it may reflect a more fundamental limitation in the ability of deep models to capture PPA processing patterns.</p>
 </section>
 </section>
 <section id="discussion" class="level2">
-<h2>Discussion</h2>
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
 <p>Driven by the question of <strong><em>which aspects of social interactions are represented by the brain</em></strong>, this study introduces a scalable, hypothesis-driven framework that automates video annotation, improving efficiency while maintaining interpretability. By integrating CLIP model embeddings with structured annotation design, this approach enables systematic exploration of the hypothesis space. Employing Representational Similarity Analysis, this study examines how neural responses align with different candidate representations, including CLIP and ResNet variants embeddings, as well as hypothesis-based annotations. The results reveal selective neural tuning, with distinct brain regions responding preferentially to specific features.</p>
 <p>Several directions can further refine this framework:</p>
 <ul>
@@ -349,27 +361,27 @@ More examples of CLIP annotations
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class='callout-icon'></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Automated hypothesis discovery and testing to investigate Neural representations
 </div>
-<div class='callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end'><i class='callout-toggle'></i></div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>This framework provides an automated workflow to discover and test hypotheses about which dimensions of a complex stimuli (e.g., social interaction) correspond to their neural representations, shedding light on how human process how humans perceive and encode such information. It consists of two processes:</p>
 <section id="constructing-the-design-space" class="level4">
-<h4>Constructing the design space</h4>
+<h4 class="anchored" data-anchor-id="constructing-the-design-space">Constructing the design space</h4>
 <p>This process begins with relevant seed literature, which serves as the foundation for hypothesis generation. These sources are used as prompt examples for a Large Language Model agent, which undergoes multiple rounds of actor-critic refinement (Zhang et al., 2023) to iteratively expand and refine a hypothesis set. The final output is a structured list of potential dimensions, which are then embedded into a semantic space, forming the design space for further exploration.</p>
 </section>
 <section id="exploring-the-design-space-efficiently-through-an-active-learning-loop" class="level4">
-<h4>Exploring the design space efficiently through an active learning loop</h4>
+<h4 class="anchored" data-anchor-id="exploring-the-design-space-efficiently-through-an-active-learning-loop">Exploring the design space efficiently through an active learning loop</h4>
 <p>Initially, a subset of hypotheses is randomly sampled from the space, and Representational Similarity Analysis (RSA) is used to evaluate their correlation with neural activity patterns. Based on these results, a surrogate model is updated to estimate how different areas of the embedding space might relate to neural representations. A sampling strategy then selects the next set of hypotheses to test, balancing exploration (searching under-explored regions) and exploitation (prioritizing areas with strong neural correlations). This process repeats iteratively until the framework either achieves a comprehensive understanding of the entire space or identifies certain dimensions that exhibit strong and meaningful neural correlations.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="../../img/Figure%20S1.jpg" class="img-fluid" width="600" /></p>
-<figcaption>Automatic Discovery and Testing of Hypotheses regarding Neural Representations</figcaption>
+<figure class="figure">
+<p><img src="../../img/Figure S1.jpg" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Automatic Discovery and Testing of Hypotheses regarding Neural Representations</figcaption>
 </figure>
 </div>
 <p>By integrating data-driven hypothesis generation with an iterative search process, this framework enables the automated specification of neural representation dimensions. Instead of relying on predefined annotations, it dynamically refines hypotheses, providing a structured yet flexible way to investigate how our brain represents complex stimuli.</p>
@@ -377,7 +389,7 @@ Automated hypothesis discovery and testing to investigate Neural representations
 </div>
 </div>
 </div>
-<hr />
+<hr>
 </section>
 <section id="references" class="level1">
 <h1>References</h1>
@@ -393,7 +405,7 @@ Automated hypothesis discovery and testing to investigate Neural representations
 <p>Esteban, O., Markiewicz, C. J., Blair, R. W., Moodie, C. A., Isik, A. I., Erramuzpe, A., Kent, J. D., Goncalves, M., DuPre, E., Snyder, M., Oya, H., Ghosh, S. S., Wright, J., Durnez, J., Poldrack, R. A., &amp; Gorgolewski, K. J. (2019). fMRIPrep: a robust preprocessing pipeline for functional MRI. <em>Nature Methods, 16</em>(1), 111–116. https://doi.org/10.1038/s41592-018-0235-4</p>
 <p>Gorgolewski, K., Burns, C. D., Madison, C., Clark, D., Halchenko, Y. O., Waskom, M. L., &amp; Ghosh, S. S. (2011). Nipype: A Flexible, Lightweight and Extensible Neuroimaging Data Processing Framework in Python. <em>Frontiers in Neuroinformatics, 5</em>. https://doi.org/10.3389/fninf.2011.00013</p>
 <p>Greve, D. N., &amp; Fischl, B. (2009). Accurate and robust brain image alignment using boundary-based registration. <em>Neuroimage, 48</em>(1), 6372.</p>
-<p>Hadley, L. V., Naylor, G., &amp; Hamilton, A. F. d. C. (2022). A review of theories and methods in the science of face-to-face social interaction. <em>Nature Reviews Psychology, 1</em>(1), 42–54. https://doi.org/10.1038/s44159-021-00008-w</p>
+<p>Hadley, L. V., Naylor, G., &amp; Hamilton, A. F. d.&nbsp;C. (2022). A review of theories and methods in the science of face-to-face social interaction. <em>Nature Reviews Psychology, 1</em>(1), 42–54. https://doi.org/10.1038/s44159-021-00008-w</p>
 <p>Huang, L. (2025). Comprehensive exploration of visual working memory mechanisms using large-scale behavioral experiment. <em>Nature Communications, 16</em>(1). https://doi.org/10.1038/s41467-025-56700-5</p>
 <p>Jenkinson, M., Bannister, P., Brady, M., &amp; Smith, S. (2002). Improved Optimization for the Robust and Accurate Linear Registration and Motion Correction of Brain Images. <em>NeuroImage, 17</em>(2), 825–841. https://doi.org/10.1006/nimg.2002.1132</p>
 <p>Julian, J., Fedorenko, E., Webster, J., &amp; Kanwisher, N. (2012). An algorithmic method for functionally defining regions of interest in the ventral visual pathway. <em>NeuroImage, 60</em>(4), 2357–2364. https://doi.org/10.1016/j.neuroimage.2012.02.055</p>
@@ -410,7 +422,7 @@ Automated hypothesis discovery and testing to investigate Neural representations
 <p>Peterson, J. C., Bourgin, D. D., Agrawal, M., Reichman, D., &amp; Griffiths, T. L. (2021). Using large-scale experiments and machine learning to discover theories of human decision-making. <em>Science, 372</em>(6547), 1209–1214. https://doi.org/10.1126/science.abe2629</p>
 <p>Popal, H., Wang, Y., &amp; Olson, I. R. (2019). A guide to representational similarity analysis for social neuroscience. <em>Social cognitive and affective neuroscience, 14</em>(11), 12431253.</p>
 <p>Power, J. D., Mitra, A., Laumann, T. O., Snyder, A. Z., Schlaggar, B. L., &amp; Petersen, S. E. (2014). Methods to detect, characterize, and remove motion artifact in resting state fMRI. <em>Neuroimage, 84</em>, 320341.</p>
-<p>Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., … &amp; Sutskever, I. (2021). Learning transferable visual models from natural language supervision. <em>In International conference on machine learning (pp. 8748-8763). PmLR</em>.</p>
+<p>Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., … &amp; Sutskever, I. (2021). Learning transferable visual models from natural language supervision. <em>In International conference on machine learning (pp.&nbsp;8748-8763). PmLR</em>.</p>
 <p>Ranganathan, P., Pramesh, C., &amp; Buyse, M. (2015). Common pitfalls in statistical analysis: Clinical versus statistical significance. <em>Perspectives in Clinical Research, 6</em>(3), 169. https://doi.org/10.4103/2229-3485.159943</p>
 <p>Sartzetaki, C., Roig, G., Snoek, C. G., &amp; Groen, I. I. (2024). One Hundred Neural Networks and Brains Watching Videos: Lessons from Alignment. <em>Biorxiv, 202412</em>.</p>
 <p>Saxe, R., &amp; Kanwisher, N. (2003). People thinking about thinking people: The role of the temporo-parietal junction in “theory of mind.” <em>NeuroImage, 19</em>(4), 1835–1842. https://doi.org/10.1016/s1053-8119(03)00230-1</p>
@@ -421,16 +433,12 @@ Automated hypothesis discovery and testing to investigate Neural representations
 <p>Wang, L., Mruczek, R. E., Arcaro, M. J., &amp; Kastner, S. (2015). Probabilistic Maps of Visual Topography in Human Cortex. <em>Cerebral Cortex, 25</em>(10), 3911–3931. https://doi.org/10.1093/cercor/bhu277</p>
 <p>Wulff, D. U., &amp; Mata, R. (2025). Semantic embeddings reveal and address taxonomic incommensurability in psychological measurement. <em>Nature Human Behaviour</em>. https://doi.org/10.1038/s41562-024-02089-y</p>
 <p>Zhang, B., Mao, H., Ruan, J., Wen, Y., Li, Y., Zhang, S., Xu, Z., Li, D., Li, Z., Zhao, R., &amp; others. (2023). Controlling large language model-based agents for large-scale decision-making: An actor-critic approach. <em>Arxiv preprint arXiv:2311.13884</em>.</p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden" data-render-id="quarto-int-sidebar-title">MichaelZspace</span> <span class="hidden" data-render-id="quarto-int-navbar-title">MichaelZspace</span> <span class="hidden" data-render-id="quarto-int-navbar:Home">Home</span> <span class="hidden" data-render-id="quarto-int-navbar:/index.html">/index.html</span> <span class="hidden" data-render-id="quarto-int-navbar:About">About</span> <span class="hidden" data-render-id="quarto-int-navbar:/about.html">/about.html</span> <span class="hidden" data-render-id="footer-center">© 2025 Welcome to MY COZY SPACE</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden" data-render-id="quarto-metatitle">MichaelZspace - A Scalable Framework to Decode Neural Representation of Social Interaction</span> <span class="hidden" data-render-id="quarto-twittercardtitle">MichaelZspace - A Scalable Framework to Decode Neural Representation of Social Interaction</span> <span class="hidden" data-render-id="quarto-ogcardtitle">MichaelZspace - A Scalable Framework to Decode Neural Representation of Social Interaction</span> <span class="hidden" data-render-id="quarto-metasitename">MichaelZspace</span> <span class="hidden" data-render-id="quarto-twittercarddesc"><a href="https://drive.google.com/file/d/1PUhsLCAq-ZCMxXJlnDkSvAAtTbR8MA_P/view">📄paper</a>, <a href="https://github.com/psymichaelzhu/Social_Interaction">💻code</a></span> <span class="hidden" data-render-id="quarto-ogcardddesc"><a href="https://drive.google.com/file/d/1PUhsLCAq-ZCMxXJlnDkSvAAtTbR8MA_P/view">📄paper</a>, <a href="https://github.com/psymichaelzhu/Social_Interaction">💻code</a></span></p>
-</div>
+
+
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -669,15 +677,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">
-      <div class='footer-contents'>© 2025 Welcome to MY COZY SPACE</div>  
-    </div>
+    <div class="nav-footer-center">© 2025 Welcome to MY COZY SPACE</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
 
-</body>
 
-</html>
+
+</body></html>
