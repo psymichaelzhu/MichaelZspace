@@ -64,7 +64,7 @@ For a given video, we extract a video embedding vector by first processing indiv
 
 Since CLIP employs a shared embedding space for images and text, it allows direct comparisons between concept embeddings and video embeddings. However, Theoretical concepts are often **multi-faceted**, making a direct association between a video’s embedding and the original concept embedding difficult to interpret.
 
-To address this, we adopt an approach inspired by questionnaire-based psychological measurement ([Wulff & Mata, 2025](https://doi.org/10.1038/s41562-024-02089-y)), where a hypothesis about a specific dimension of social interaction is first operationalized into a structured set of items. For instance, if the hypothesis is about the "*relationship*" dimension of social interactions, we take specific relationship types such as "*friends*", "*coworkers*", as items to define this dimension. Each item is converted into an embedding vector using CLIP's text encoder.
+To address this, we adopt an approach inspired by questionnaire-based psychological measurement ([Wulff & Mata, 2025](https://doi.org/10.1038/s41562-024-02089-y); [Grand et al., 2022](https://doi.org/10.1038/s41562-022-01316-8)), where a hypothesis about a specific dimension of social interaction is first operationalized into a structured set of items. For instance, if the hypothesis is about the "*relationship*" dimension of social interactions, we take specific relationship types such as "*friends*", "*coworkers*", as items to define this dimension. Each item is converted into an embedding vector using CLIP's text encoder.
 
 We then compute the cosine similarity between the video embedding and each item embedding. These similarity scores are normalized across items to sum to one, characterizing the relative likelihood of how well the video aligns with each item. The final vector provides a structured description of the video in a specific hypothesis context.
 
@@ -195,6 +195,8 @@ Deen, B., Koldewyn, K., Kanwisher, N., & Saxe, R. (2015). Functional Organizatio
 Esteban, O., Markiewicz, C. J., Blair, R. W., Moodie, C. A., Isik, A. I., Erramuzpe, A., Kent, J. D., Goncalves, M., DuPre, E., Snyder, M., Oya, H., Ghosh, S. S., Wright, J., Durnez, J., Poldrack, R. A., & Gorgolewski, K. J. (2019). fMRIPrep: a robust preprocessing pipeline for functional MRI. *Nature Methods, 16*(1), 111–116. https://doi.org/10.1038/s41592-018-0235-4
 
 Gorgolewski, K., Burns, C. D., Madison, C., Clark, D., Halchenko, Y. O., Waskom, M. L., & Ghosh, S. S. (2011). Nipype: A Flexible, Lightweight and Extensible Neuroimaging Data Processing Framework in Python. *Frontiers in Neuroinformatics, 5*. https://doi.org/10.3389/fninf.2011.00013
+
+Grand, G., Blank, I. A., Pereira, F., & Fedorenko, E. (2022). Semantic projection recovers rich human knowledge of multiple object features from word embeddings. *Nature Human Behaviour, 6*(7), 975–987. https://doi.org/10.1038/s41562-022-01316-8
 
 Greve, D. N., & Fischl, B. (2009). Accurate and robust brain image alignment using boundary-based registration. *Neuroimage, 48*(1), 6372.
 
