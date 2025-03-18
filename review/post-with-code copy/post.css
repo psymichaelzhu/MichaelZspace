@@ -1,0 +1,26 @@
+/* title */
+.quarto-title-block .title {
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* description link */
+  .quarto-title-block .description a {
+    color: rgb(102, 172, 242);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  /* categories */
+  .quarto-title-block .quarto-categories .quarto-category {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    display: inline-block;
+    font-weight: bold;
+    color: #333333;
+    border: 0px solid #333333;
+  }

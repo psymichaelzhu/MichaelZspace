@@ -248,7 +248,7 @@ fMRI data Preprocessing
 </div>
 <p>For a given video, we extract a video embedding vector by first processing individual frames and then aggregating their embeddings. Each video is sliced into a sequence of 90 frames, and each frame is passed through CLIP’s vision encoder to obtain an embedding vector. The frame embeddings are then averaged to generate a single video embedding vector.</p>
 <p>Since CLIP employs a shared embedding space for images and text, it allows direct comparisons between concept embeddings and video embeddings. However, Theoretical concepts are often <strong>multi-faceted</strong>, making a direct association between a video’s embedding and the original concept embedding difficult to interpret.</p>
-<p>To address this, we adopt an approach inspired by questionnaire-based psychological measurement (<a href="https://doi.org/10.1038/s41562-024-02089-y">Wulff &amp; Mata, 2025</a>; <a href="https://doi.org/10.1038/s41562-022-01316-8">Grand et al., 2022</a>) and archetypal analysis(<a href="https://doi.org/10.1080/00401706.1994.10485840">Cutler &amp; Breiman, 1994</a>; <a href="https://arxiv.org/pdf/2502.12892">Fel et al., 2025</a>), where a hypothesis about a specific dimension of social interaction is first operationalized into a structured set of items. For instance, if the hypothesis is about the “<em>relationship</em>” dimension of social interactions, we take specific relationship types such as “<em>friends</em>”, “<em>coworkers</em>”, as items to define this dimension. Each item is converted into an embedding vector using CLIP’s text encoder.</p>
+<p>To address this, we adopt an approach inspired by questionnaire-based psychological measurement (<a href="https://doi.org/10.1038/s41562-024-02089-y">Wulff &amp; Mata, 2025</a>; <a href="https://doi.org/10.1038/s41562-022-01316-8">Grand et al., 2022</a>) and archetypal analysis(Cutler &amp; Breiman, 1994; Fel et al., 2025), where a hypothesis about a specific dimension of social interaction is first operationalized into a structured set of items. For instance, if the hypothesis is about the “<em>relationship</em>” dimension of social interactions, we take specific relationship types such as “<em>friends</em>”, “<em>coworkers</em>”, as items to define this dimension. Each item is converted into an embedding vector using CLIP’s text encoder.</p>
 <p>We then compute the cosine similarity between the video embedding and each item embedding. These similarity scores are normalized across items to sum to one, characterizing the relative likelihood of how well the video aligns with each item. The final vector provides a structured description of the video in a specific hypothesis context.</p>
 <div id="fig-4" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -370,8 +370,24 @@ More examples of CLIP annotations
 <li>This framework can be applied beyond social interaction, providing interpretable insights into broad perception and evaluation of complex stimuli, for example, which features of an image makes it memorable, or what factors drive the popularity of a YouTube video.</li>
 <li>Finally, while this study used predefined annotation dimensions, the framework can be extended to automatically identify relevant dimensions using data-driven methods such as active learning within the hypothesis space (<a href="https://doi.org/10.1038/s41586-018-0637-6">Awad et al., 2018</a>; <a href="https://doi.org/10.1038/s41467-025-56700-5">Huang, 2025</a>; <a href="https://doi.org/10.1126/science.abe2629">Peterson et al., 2021</a>), which leverages previously explored hypotheses’ results to guide the sampling of new dimensions.</li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>首先实现active learning 形成一个完整框架 然后在多个心理学的topic上去检验，比如图片的memorability 还有social interaction这个 看这个框架用在行为和神经上对complex stimuli的perception &amp; evaluation提供可解释性 行为上：什么方面可以解释一张图片是memorable (这种的话就是有行为指标的) 神经上: 什么方面在看social interaction被加工 (这种就是naturalistic viewing) 但这些知识得浓缩在一个模型里 类似于hql那样找一堆人来标也没关系</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -380,7 +396,7 @@ Automated hypothesis discovery and testing to investigate Neural representations
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>This framework provides an automated workflow to discover and test hypotheses about which dimensions of a complex stimuli (e.g., social interaction) correspond to their neural representations, shedding light on how human process how humans perceive and encode such information. It consists of two processes:</p>
 <section id="constructing-the-design-space" class="level4">

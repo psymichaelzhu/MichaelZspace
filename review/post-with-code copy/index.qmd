@@ -64,7 +64,7 @@ For a given video, we extract a video embedding vector by first processing indiv
 
 Since CLIP employs a shared embedding space for images and text, it allows direct comparisons between concept embeddings and video embeddings. However, Theoretical concepts are often **multi-faceted**, making a direct association between a video’s embedding and the original concept embedding difficult to interpret.
 
-To address this, we adopt an approach inspired by questionnaire-based psychological measurement ([Wulff & Mata, 2025](https://doi.org/10.1038/s41562-024-02089-y); [Grand et al., 2022](https://doi.org/10.1038/s41562-022-01316-8)) and archetypal analysis([Cutler & Breiman, 1994](https://doi.org/10.1080/00401706.1994.10485840); [Fel et al., 2025](https://arxiv.org/pdf/2502.12892)), where a hypothesis about a specific dimension of social interaction is first operationalized into a structured set of items. For instance, if the hypothesis is about the "*relationship*" dimension of social interactions, we take specific relationship types such as "*friends*", "*coworkers*", as items to define this dimension. Each item is converted into an embedding vector using CLIP's text encoder.
+To address this, we adopt an approach inspired by questionnaire-based psychological measurement ([Wulff & Mata, 2025](https://doi.org/10.1038/s41562-024-02089-y); [Grand et al., 2022](https://doi.org/10.1038/s41562-022-01316-8)) and archetypal analysis(Cutler & Breiman, 1994; Fel et al., 2025), where a hypothesis about a specific dimension of social interaction is first operationalized into a structured set of items. For instance, if the hypothesis is about the "*relationship*" dimension of social interactions, we take specific relationship types such as "*friends*", "*coworkers*", as items to define this dimension. Each item is converted into an embedding vector using CLIP's text encoder.
 
 We then compute the cosine similarity between the video embedding and each item embedding. These similarity scores are normalized across items to sum to one, characterizing the relative likelihood of how well the video aligns with each item. The final vector provides a structured description of the video in a specific hypothesis context.
 
@@ -151,6 +151,18 @@ Several directions can further refine this framework:
 -   ROI definition in this study followed the original paper, which primarily focused on visual processing regions, potentially overlooking higher-order cognitive areas involved in social reasoning. Searchlight ([Kriegeskorte et al., 2006](https://doi.org/10.1073/pnas.0600244103) analysis could provide a more comprehensive neural mapping.
 -   This framework can be applied beyond social interaction, providing interpretable insights into broad perception and evaluation of complex stimuli, for example, which features of an image makes it memorable, or what factors drive the popularity of a YouTube video.
 -   Finally, while this study used predefined annotation dimensions, the framework can be extended to automatically identify relevant dimensions using data-driven methods such as active learning within the hypothesis space ([Awad et al., 2018](https://doi.org/10.1038/s41586-018-0637-6); [Huang, 2025](https://doi.org/10.1038/s41467-025-56700-5); [Peterson et al., 2021](https://doi.org/10.1126/science.abe2629)), which leverages previously explored hypotheses' results to guide the sampling of new dimensions.
+
+::: {.callout-warning collapse="false"}
+首先实现active learning
+形成一个完整框架
+然后在多个心理学的topic上去检验，比如图片的memorability 还有social interaction这个
+看这个框架用在行为和神经上对complex stimuli的perception & evaluation提供可解释性
+行为上：什么方面可以解释一张图片是memorable (这种的话就是有行为指标的)
+神经上: 什么方面在看social interaction被加工 (这种就是naturalistic viewing)
+但这些知识得浓缩在一个模型里
+类似于hql那样找一堆人来标也没关系
+:::
+
 
 ::: {.callout-note collapse="false"}
 ## Automated hypothesis discovery and testing to investigate Neural representations
